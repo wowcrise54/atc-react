@@ -1,0 +1,28 @@
+title: RP_0123_detect_and_contain_foo_malware
+id: RP0123
+description: >
+  План реагирования на обнаружение Foo-Malware в корпоративной сети.
+author: '@ваше_имя_или_компания'
+creation_date: 2025/05/12
+severity: H            # H|M|L
+tlp: AMBER             # TLP классификация
+pap: WHITE             # PAP при необходимости
+tags:
+  - foo-malware
+  - ransomware
+mitre_attack:
+  tactic: TA0002: Execution
+  technique:
+    - T1204.002: Malicious File
+response_actions:
+  - id: RA2103          # пример ID действия
+    stage: identification
+    order: 1
+  - id: RA3101
+    stage: containment
+    order: 2
+workflow: |
+  1. Выполните RA2103, чтобы извлечь образец и метаданные.
+  2. ...
+notes: |
+  При работе со стендами ВМ — учитывайте, что...
